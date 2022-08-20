@@ -18,7 +18,7 @@ server.use(express.static(path.join(__dirname, '../public')))  // Tornando a pas
 server.use(mainRoutes)
 
 server.use((req, res) =>{
-    res.send('Página não encontrada!')
+    res.render('pages/404')
 })
 
 server.listen(process.env.PORT)  // Pega a porta definida no arquivo de variáveis de ambiente (.env)
